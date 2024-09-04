@@ -1,0 +1,19 @@
+<form style="width: 80%;">
+  <div class="center-img" style="height: 100px; width: 100px;"></div>
+  <h1 class="h2 mb-3 fw-normal text-light text-center quantumBank">QUANTUM BANK</h1>
+  <div class="form-floating mb-2">
+    <input type="text" class="form-control" id="usuarioConta" placeholder="Sua conta">
+    <label for="floatingInput">Usuário</label>
+  </div>
+  <div class="form-floating">
+    <input type="password" class="form-control" id="senhaConta" placeholder="Sua senha">
+    <label for="floatingPassword">Senha</label>
+  </div>
+  <div class="checkbox mb-3 text-light">
+    <label>
+      <input type="checkbox" value="lembrar-me"> Lembrar-me
+    </label>
+  </div>
+  <button class="w-100 btn btn-lg btn-primary mb-2 fw-bold" type="button" (click)="logar()">Acessar a conta</button>
+  <button class="w-100 btn btn-lg fw-bold" style="background-color: #00FF88;" type="button" (click)="logar()">Criar uma conta</button>
+</form>
