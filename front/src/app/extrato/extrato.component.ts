@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Transacao } from '../../model/transacao';
 import { HomeComponent } from '../home/home.component';
+import { TransacaoService } from '../transacao.service';
 
 @Component({
   selector: 'app-extrato',
@@ -14,14 +15,14 @@ import { HomeComponent } from '../home/home.component';
 export class ExtratoComponent implements OnInit{
   extrato: Transacao[] = [];
 
+  constructor(
+    private service: TransacaoService
+  ) {
+  }
+
   ngOnInit(): void{
-    let transaction: Transacao = {
-      data: new Date,
-      descricao: 'Pix 001',
-      valor: 10.00,
-      operacao: 'C',
-      numero: 1
-    };
-    this.extrato.push(transaction);
+    this.service.buscarExtrato().subscribe((item: Transacao) => {
+      this.extrato.push(item);
+    })
   }
 }

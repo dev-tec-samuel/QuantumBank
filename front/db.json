@@ -1,0 +1,32 @@
+{
+  "correntistas": [
+      { "id": 1, "nome": "Teste 1" },
+      { "id": 1, "nome": "Teste 1" },
+      { "id": 1, "nome": "Teste 1" }
+  ],
+  "contas": [
+
+  ],
+
+  "transacoes" : [
+     {
+      "numero": 12345,
+      "descricao": "PIX FULANO DE TAL",
+      "data": "20/10/2024",
+      "valor": 1000.00,
+      "operacao": "D"
+     },
+     {
+      "numero": 12346,
+      "descricao": "PGT INTERNET",
+      "data": "20/10/2024",
+      "valor": 100.90,
+      "operacao": "C"
+     }
+  ],
+
+  "perfil": {
+      "name": "Usuario 1",
+      "login": "ts000148989"
+  }
+}
