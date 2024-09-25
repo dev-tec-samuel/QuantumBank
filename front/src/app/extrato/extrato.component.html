@@ -1,5 +1,14 @@
-<ul>
-  <li *ngFor="let item of extrato">
-    {{item.descricao}} - {{item.valor}}
-  </li>
-</ul>
+<p-table [value]="extrato">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Descrição</th>
+      <th>Valor</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-transaction>
+    <tr>
+      <td>{{transaction.descricao}}</td>
+      <td>{{transaction.valor | currency:'R$'}}</td>
+    </tr>
+  </ng-template>
+</p-table>

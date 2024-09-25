@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [InputTextModule, ButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Transacao } from '../model/transacao';
 
 @Injectable({
@@ -11,7 +12,7 @@ export class TransacaoService {
     private http: HttpClient
   ) { }
 
-  public buscarExtrato() {
-    return this.http.get<Transacao>("http://localhost:3000/transacoes");
+  public buscarExtrato(): Observable<Transacao[]> {
+    return this.http.get<Transacao[]>("http://localhost:3000/transacoes");
   }
 }
