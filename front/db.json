@@ -1,32 +1,43 @@
 {
   "correntistas": [
-      { "id": 1, "nome": "Teste 1" },
-      { "id": 1, "nome": "Teste 1" },
-      { "id": 1, "nome": "Teste 1" }
+    {
+      "id": 1,
+      "nome": "Teste 1",
+      "email": "samurosa1203@gmail.com",
+      "cpf": 12345678910,
+      "endereco": "Rua dos Bobos, n° 0",
+      "senha": "123"
+    },
+    {
+      "id": 259370,
+      "nome": "Samuel Filipe Drumm da Rosa",
+      "email": "sr0127775@setrem.com.br",
+      "cpf": "04350136029",
+      "endereco": "Rua dos Bobos, n° 0",
+      "senha": "123"
+    }
   ],
-  "contas": [
-
-  ],
-
-  "transacoes" : [
-     {
+  "contas": [],
+  "transacoes": [
+    {
       "numero": 12345,
       "descricao": "PIX FULANO DE TAL",
       "data": "20/10/2024",
-      "valor": 1000.00,
-      "operacao": "D"
-     },
-     {
+      "valor": 1000,
+      "operacao": "D",
+      "id": "30ee"
+    },
+    {
       "numero": 12346,
       "descricao": "PGT INTERNET",
       "data": "20/10/2024",
-      "valor": 100.90,
-      "operacao": "C"
-     }
+      "valor": 100.9,
+      "operacao": "C",
+      "id": "455b"
+    }
   ],
-
   "perfil": {
-      "name": "Usuario 1",
-      "login": "ts000148989"
+    "name": "Usuario 1",
+    "login": "ts000148989"
   }
 }
