@@ -1,0 +1,39 @@
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="cadastrarUser()" class="form-signup text-dark" style="max-width: 500px; margin-top: 50px;">
+    <div class="center-img" style="height: 100px; width: 100px;"></div>
+    <h1 class="h2 mb-3 fw-normal text-center quantumBank">Quantum Bank</h1>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="nome" placeholder="Nome completo" [(ngModel)]="dadosCadastrais.nome" name="nome" required>
+      <label for="nome">Nome completo</label>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" [(ngModel)]="dadosCadastrais.email" name="email" required>
+      <label for="email">E-mail</label>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="cpf" placeholder="CPF" [(ngModel)]="dadosCadastrais.cpf" name="cpf" required>
+      <label for="cpf">CPF</label>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="endereco" placeholder="Endereço" [(ngModel)]="dadosCadastrais.endereco" name="endereco" required>
+      <label for="endereco">Endereço</label>
+    </div>
+
+    <div class="form-floating mb-2">
+      <input type="password" class="form-control" id="senha" placeholder="Senha" [(ngModel)]="dadosCadastrais.senha" name="senha" required>
+      <label for="senha">Senha</label>
+    </div>
+
+    <div class="checkbox mb-3 text-light">
+      <label>
+        <input type="checkbox" value="termos" required> Concordo com os termos e condições
+      </label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Criar Conta</button>
+  </form>
+</div>

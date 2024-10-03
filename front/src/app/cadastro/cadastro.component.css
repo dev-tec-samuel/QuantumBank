@@ -1,0 +1,15 @@
+.center-img {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-size: cover;
+  background-image: url('../../../public/img/atomo.png');
+}
+
+.termosCondicoes a {
+  text-decoration: none; /* Remove a sublinhado */
+}
+
+.termosCondicoes a:hover {
+  text-decoration: underline; /* Opcional: Adiciona o sublinhado ao passar o mouse */
+}
