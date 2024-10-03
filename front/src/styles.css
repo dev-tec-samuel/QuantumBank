@@ -15,3 +15,8 @@ body {
   font-size: 18px;
   overflow: hidden;
 }
+
+.quantumBank {
+  color: white;
+  font-family: 'Source Code Pro', sans-serif !important;;
+}
