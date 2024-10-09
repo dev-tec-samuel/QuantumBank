@@ -29,7 +29,7 @@ export class LoginComponent {
     }
 
     this.correntistaService.listarCorrentistas().subscribe(correntistas => {
-      const correntista = correntistas.find(c => c.cpf === Number(this.cpf));
+      const correntista = correntistas.find(c => String(c.cpf) === String(this.cpf));
 
       if (!correntista) {
         alert('CPF não encontrado');
