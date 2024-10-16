@@ -1,0 +1,34 @@
+<div class="simulation-container">
+  <form [formGroup]="provaPooForm" (ngSubmit)="onSubmit()">
+    <h1 class="simulation-title">Simulador de Investimento</h1>
+
+    <div class="form-group">
+      <label for="aporteMensal">Aporte Mensal (R$):</label>
+      <input
+        type="number"
+        id="aporteMensal"
+        formControlName="aporteMensal"
+        class="form-control"
+        placeholder="Informe o valor"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="dataResgate">Data Estimada de Resgate:</label>
+      <input
+        type="date"
+        id="dataResgate"
+        formControlName="dataResgate"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn-simulate" [disabled]="provaPooForm.invalid">
+      Simular
+    </button>
+
+    <div *ngIf="resultadoRendimento !== null" class="result">
+      <h3 class="resultadoRendimento">Rendimento Estimado: R$ {{ resultadoRendimento | number:'1.2-2' }}</h3>
+    </div>
+  </form>
+</div>
