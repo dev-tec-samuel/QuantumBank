@@ -15,7 +15,7 @@ import { TransacaoService } from '../transacao.service';
 })
 export class ExtratoComponent implements OnInit{
   extrato: Transacao[] = [];
-  texto: string = "EXTRATO DO CLEINTE";
+  texto: string = "EXTRATO DO CLIENTE";
 
   constructor(
     private service: TransacaoService
