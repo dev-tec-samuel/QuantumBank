@@ -14,7 +14,7 @@ export class CorrentistaService {
 
   // Método para cadastrar um novo correntista
   public cadastrar(correntista: Correntista): Observable<any> {
-    return this.http.post("http://localhost:8081/correntista", correntista);
+    return this.http.post("http://localhost:8081/correntista/insertCorrentista", correntista);
   }
 
   // Método para obter a lista de correntistas
