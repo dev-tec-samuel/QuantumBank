@@ -1,7 +1,8 @@
 export interface Transacao {
-  numero: number;
+  id: number;
   descricao: string;
-  valor: number;
   data: Date;
+  valor: number;
   operacao: string;
+  id_correntista: string;
 }

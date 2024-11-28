@@ -3,6 +3,8 @@ package br.com.poo.poobank.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,8 +24,9 @@ public class UsuarioController {
   private UsuarioRepository repository;
 
   @GetMapping
-  public List<Usuario> searchUsers() {
-    return repository.findAll(); //Função padrão que faz um select * from table
+  public ResponseEntity<List<Usuario>> searchUsers() {
+    List<Usuario> userList = repository.findAll();
+    return ResponseEntity.ok().body(userList); //Função padrão que faz um select * from table
     // return repository.buscarUsuariosSemSenha();
   }
 
@@ -32,23 +35,24 @@ public class UsuarioController {
     return repository.findById(id).get();
   }
 
+  
   @GetMapping("/login/{login}")
   public Usuario searchUserByLogin(@PathVariable("login") String login) {
     return repository.searchUserByLogin(login);
   }
 
   @PostMapping
-  public String inserirUser(@RequestBody Usuario usuario)
+  public ResponseEntity<Usuario> insertUser(@RequestBody Usuario user)
   {
-    repository.save(usuario);
-    return "ok";
+    Usuario newUser = repository.save(user);
+    return ResponseEntity.status(HttpStatus.CREATED).body(newUser);
   }
 
   @DeleteMapping("/{id}")
-  public String deleteUser(@PathVariable("id") Integer id)
+  public ResponseEntity deleteUser(@PathVariable("id") Integer id)
   {
     repository.deleteById(id);
-    return "ok";
+    return ResponseEntity.ok().build();
   }
   
 }

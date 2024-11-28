@@ -5,4 +5,5 @@ export class Correntista {
   cpf?: number;
   endereco?: string;
   senha?: string;
+  chave?: string;
 }
