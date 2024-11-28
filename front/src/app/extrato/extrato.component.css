@@ -1,0 +1,92 @@
+/* Container principal */
+.transactions-container {
+  background: linear-gradient(135deg, #0d1c28, #172f44);
+  color: #444;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+/* Título */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff; /* Branco */
+  letter-spacing: 1.5px;
+}
+
+/* Wrapper da tabela */
+.table-wrapper {
+  background: #1e2a36;
+  border-radius: 15px;
+  padding: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização da tabela */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th {
+  background: #263a4d; /* Azul acinzentado */
+  color: #ffffff; /* Branco */
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px;
+  text-align: left;
+}
+
+/* Linhas padrão */
+.transactions-table td {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555; /* Cinza médio */
+  background: #ffffff; /* Fundo branco apenas nas informações */
+  transition: color 0.3s ease, background 0.3s ease; /* Transições suaves */
+}
+
+/* Hover na linha */
+.transactions-table tr:hover td {
+  background: #34495e; /* Fundo cinza escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+/* Ajuste para crédito e débito */
+.transactions-table .credit {
+  color: #00aa88; /* Verde padrão */
+  font-weight: bold;
+}
+
+.transactions-table .debit {
+  color: #cc4444; /* Vermelho padrão */
+  font-weight: bold;
+}
+
+.transactions-table tr:hover .credit {
+  color: #00ffbb; /* Verde mais vibrante no hover */
+}
+
+.transactions-table tr:hover .debit {
+  color: #ff6666; /* Vermelho mais vibrante no hover */
+}
+
+/* Datas */
+.transactions-table .date {
+  color: #666; /* Cinza inicial */
+  font-size: 15px;
+}
+
+.transactions-table tr:hover .date {
+  color: #ffffff; /* Branco no hover */
+}

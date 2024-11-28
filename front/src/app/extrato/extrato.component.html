@@ -1,4 +1,4 @@
-<p-table [value]="extrato">
+<!-- <p-table [value]="extrato">
   <ng-template pTemplate="header">
     <tr>
       <th>Descrição</th>
@@ -11,4 +11,33 @@
       <td>{{ transaction.valor | currency:'BRL':'symbol':'1.2-2'}}</td>
     </tr>
   </ng-template>
-</p-table>
+</p-table> -->
+<div class="transactions-container">
+  <h2 class="title">Movimentações</h2>
+
+  <div class="table-wrapper">
+    <p-table [value]="extrato" class="transactions-table">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Valor</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-transaction>
+        <tr class="transaction-row">
+          <td class="description">
+            <i class="pi pi-arrow-right" *ngIf="transaction.operacao === 'D'"></i>
+            <i class="pi pi-arrow-left" *ngIf="transaction.operacao === 'C'"></i>
+            {{ transaction.descricao }}
+          </td>
+          <td class="date">{{ transaction.data | date: 'dd/MM/yyyy' }}</td>
+          <td class="value" [ngClass]="{'credit': transaction.operacao === 'C', 'debit': transaction.operacao === 'D'}">
+            {{ transaction.operacao === 'C' ? '+' : '-' }}
+            {{ transaction.valor | currency:'BRL':'symbol':'1.2-2' }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
