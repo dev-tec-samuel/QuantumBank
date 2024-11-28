@@ -16,4 +16,9 @@ export class HomeComponent{
     //this.router.navigate(['/prova-poo'])
   }
 
+  fazerPix() {
+    this.router.navigate(['/pix'])
+    //this.router.navigate(['/prova-poo'])
+  }
+
 }
