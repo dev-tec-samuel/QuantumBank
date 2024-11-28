@@ -12,8 +12,8 @@ export class HomeComponent{
   constructor(private router:Router){}
 
   verExtrato() {
-    // this.router.navigate(['/extrato'])
-    this.router.navigate(['/prova-poo'])
+    this.router.navigate(['/extrato'])
+    //this.router.navigate(['/prova-poo'])
   }
 
 }
