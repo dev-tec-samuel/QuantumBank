@@ -13,6 +13,6 @@ export class TransacaoService {
   ) { }
 
   public buscarExtrato(): Observable<Transacao[]> {
-    return this.http.get<Transacao[]>("http://localhost:3000/transacoes");
+    return this.http.get<Transacao[]>("http://localhost:8081/transacao");
   }
 }
