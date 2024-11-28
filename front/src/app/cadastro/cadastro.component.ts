@@ -21,7 +21,7 @@ export class CadastroComponent {
     private router: Router,
     private service: CorrentistaService
   ) {
-    this.dadosCadastrais.id = this.generateUniqueID();
+    //this.dadosCadastrais.id = this.generateUniqueID();
   }
 
   // Função para gerar um ID único

@@ -24,6 +24,11 @@
     </div>
 
     <div class="form-floating mb-2">
+      <input type="text" class="form-control" id="chave" placeholder="Chave Pix" [(ngModel)]="dadosCadastrais.chave" name="chave" required>
+      <label for="chave">Chave Pix</label>
+    </div>
+
+    <div class="form-floating mb-2">
       <input type="password" class="form-control" id="senha" placeholder="Senha" [(ngModel)]="dadosCadastrais.senha" name="senha" required>
       <label for="senha">Senha</label>
     </div>
