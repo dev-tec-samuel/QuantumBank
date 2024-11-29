@@ -17,7 +17,7 @@ export class HomeComponent{
   }
 
   fazerPix() {
-    this.router.navigate(['/pix'])
+    this.router.navigate(['/opcao-pix'])
     //this.router.navigate(['/prova-poo'])
   }
 
