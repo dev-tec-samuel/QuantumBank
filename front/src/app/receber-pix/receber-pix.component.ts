@@ -1,46 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-receber-pix',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './receber-pix.component.html',
   styleUrl: './receber-pix.component.css'
 })
 export class ReceberPixComponent {
-  /*pixKey: string = '';
-  amount: number | null = null;
-  qrCodeUrl: string | null = null;
-  pixCode: string | null = null;
-
-  generateQRCode(): void {
-    if (!this.pixKey || this.amount === null) {
-      alert('Por favor, preencha todos os campos!');
-      return;
-    }
-
-    // Gerando o código Pix no formato adequado
-    this.pixCode = this.generatePixCode(this.pixKey, this.amount);
-
-    // Gerando o QR Code através do Google Chart API
-    this.qrCodeUrl = `https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=${encodeURIComponent(this.pixCode)}`;
-  }
-
-  generatePixCode(key: string, value: number): string {
-    const valueFormatted = value.toFixed(2);
-    return `00020101021126330014BR.GOV.BCB.PIX0114${key}5204000053039865405${valueFormatted}5802BR5912Usuario6009Cidade62070503***6304`;
-  }
-
-  copyPixCode(): void {
-    if (this.pixCode) {
-      navigator.clipboard.writeText(this.pixCode).then(() => {
-        alert('Código Pix copiado para a área de transferência!');
-      });
-    }
-  }*/
     pixKey: string = ''; // Chave PIX
     amount: number | null = null; // Valor do PIX
     description: string = ''; // Descrição opcional
