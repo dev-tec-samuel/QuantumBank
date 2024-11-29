@@ -1,1 +1,35 @@
-<p>receber-pix works!</p>
+<div class="pix-container">
+  <h1><i class="fa-brands fa-pix fa-fw"></i></h1>
+
+  <!-- Campo para chave PIX -->
+  <div class="pix-section">
+    <h2>Chave PIX</h2>
+    <input
+      type="text"
+      [(ngModel)]="pixKey"
+      placeholder="Digite sua chave PIX"
+    />
+  </div>
+
+  <!-- Campo para valor -->
+  <div class="pix-section">
+    <h2>Valor</h2>
+    <input
+      type="number"
+      [(ngModel)]="amount"
+      placeholder="Digite o valor (R$)"
+    />
+  </div>
+
+  <!-- Botão para gerar o código PIX -->
+  <button class="action-button" (click)="generateQRCode()">Gerar Código PIX</button>
+
+  <!-- Exibição do código gerado -->
+  <div *ngIf="qrCodeData" class="pix-section">
+    <textarea
+      readonly
+      class="pix-code-display"
+      [value]="qrCodeData"
+    ></textarea>
+  </div>
+</div>

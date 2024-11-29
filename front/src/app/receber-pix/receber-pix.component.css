@@ -1,0 +1,119 @@
+/* Container Principal */
+.pix-container {
+  background-color: #1c1f2a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Garante alinhamento em coluna */
+  gap: 20px; /* Espaçamento entre os elementos */
+}
+
+/* Título Principal */
+.pix-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px; /* Reduz a margem inferior */
+  color: #4fd1c5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Sessão de Entrada*/
+.pix-section {
+  margin-bottom: 10px;
+}
+
+.pix-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #4fd1c5;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+.pix-section input,
+.pix-code-display {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #2a2e38;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* Código PIX Display */
+.pix-code-display {
+  height: 100px; /* Altura menor */
+  margin-bottom: 20px; /* Espaçamento extra abaixo */
+}
+
+/* Botão Principal */
+.action-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4fd1c5, #2a5298);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-top: 20px; /* Espaçamento entre o botão e outros elementos */
+}
+
+.action-button:hover {
+  background: linear-gradient(135deg, #38b2ac, #1e3c72);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* QR Code Section */
+.qr-code-section {
+  margin-top: 20px;
+}
+
+.qr-code-container {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+
+/* Remove as setinhas do campo numérico */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 80px; /* Aumenta a altura para evitar texto escondido */
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #2a2e38;
+  color: #fff;
+  overflow: hidden; /* Remove a barra de rolagem */
+  margin-bottom: 20px; /* Espaçamento extra abaixo */
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4fd1c5;
+}
