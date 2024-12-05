@@ -41,6 +41,8 @@ export class LoginComponent {
       } else {
         alert('Senha incorreta');
       }
+
+      this.correntistaService.correntistaLogado = Number(correntista.id);
     }, erro => {
       alert('Erro ao tentar fazer login: ' + erro.message);
     });
