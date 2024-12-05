@@ -21,7 +21,7 @@ public class Transacao {
   private String operacao;
 
   @ManyToOne
-  @JoinColumn(name = "id_correntista")
+  @JoinColumn(name = "id_correntista", referencedColumnName = "id")
   private Correntista correntista;
 
   public Integer getId() {

@@ -12,7 +12,7 @@ export class TransacaoService {
     private http: HttpClient
   ) { }
 
-  public buscarExtrato(): Observable<Transacao[]> {
-    return this.http.get<Transacao[]>("http://localhost:8081/transacao");
+  public buscarExtrato(id:number): Observable<Transacao[]> {
+    return this.http.get<Transacao[]>("http://localhost:8081/transacao/id_correntista/" + id);
   }
 }
