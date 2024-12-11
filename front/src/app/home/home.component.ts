@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CorrentistaService } from '../correntista.service';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +10,27 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent{
-  constructor(private router:Router){}
+  constructor(
+    private router: Router,
+    private correntista: CorrentistaService
+  ){}
+
+  ngOnInit(): void{
+    if (this.correntista.correntistaLogado !== 0) {
+      this.router.navigate(['/login']);
+    }
+  }
 
   verExtrato() {
     this.router.navigate(['/extrato'])
-    //this.router.navigate(['/prova-poo'])
   }
 
   fazerPix() {
     this.router.navigate(['/opcao-pix'])
-    //this.router.navigate(['/prova-poo'])
+  }
+
+  investir() {
+    this.router.navigate(['/investir'])
   }
 
 }
