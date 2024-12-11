@@ -13,7 +13,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'extrato', component: ExtratoComponent },
   { path: 'cadastro', component: CadastroComponent},
-  { path: 'prova-poo', component: ProvaPooComponent},
+  { path: 'investir', component: ProvaPooComponent},
   { path: 'enviar-pix', component: EnviarPixComponent},
   { path: 'opcao-pix', component: OpcaoPixComponent},
   { path: 'receber-pix', component: ReceberPixComponent},
